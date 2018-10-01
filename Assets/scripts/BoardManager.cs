@@ -103,7 +103,7 @@ public class BoardManager : Seleccion {
     public InputField columnaInicio;
     public InputField filaFinal;
     public InputField columnaFinal;
-    public Text textoPermiso;
+    public Text textoPermiso; //muestra 
     public Text textoSimetria;
 
     List<string> columnasAbc = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"};
@@ -118,14 +118,22 @@ public class BoardManager : Seleccion {
             v_filaFinal  = filaFinalInt;
             //columnas
 
-            if(columnasAbc.Contains(columnaInicio.text)){
-
+            if(columnasAbc.Contains(columnaInicio.text)){ // Contains(InputEscena.text) columnaInicio y columnaFinal
+                //evitar case sentivity para ponerlos mayusculas
+                //comparar con lista columnasAbc para obtener su indice
+                //y guardarlo en v_columnaFinal/Inicio el indice
             }
 
-            int columnaInt = Int32.Parse(columnaInicio.text);
-            v_columnaInicio = columnaInt;
-            int columnaFinalInt = Int32.Parse(columnaFinal.text);
-            v_columnaFinal = columnaFinalInt;
+            // y después v_columnaFinal/Inicio = variableInt;
+
+            //no hacer caso
+            // int columnaInt = Int32.Parse(columnaInicio.text);
+            // v_columnaInicio = columnaInt;
+
+            // int columnaFinalInt = Int32.Parse(columnaFinal.text);
+            // v_columnaFinal = columnaFinalInt;
+
+
             textoPermiso.text = "coordenadas inicio: " + v_filaInicio + "," + v_columnaInicio+ "\ncoordenadas final: " + v_filaFinal + "," + v_columnaFinal;
             SceneManager.LoadScene(4);
 
