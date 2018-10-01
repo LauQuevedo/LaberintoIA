@@ -44,6 +44,7 @@ public class BoardManager : MonoBehaviour {
     public GameObject madera;
     public GameObject montana;
     public GameObject ladrillo;
+    public GameObject[] terrenosRandom;
 
 
     //delimitar el board
@@ -73,6 +74,18 @@ public class BoardManager : MonoBehaviour {
     //     List<string> terrenos = new List<string>() { "lava", "agua", "campo", "muro", "tierra", "hielo", "madera", "montana", "ladrillo" };
     //     dropdown.AddOptions(terrenos);
     // }
+
+    // ----------------------------  ESCENA SELECCION DE PISO   ----------------------------------- 
+    public Text noPisos;
+    public InputField noFilas;
+
+    public void Start(){
+        //setValuesInfo();
+    }
+
+    void setValuesInfo(){
+        noPisos.text = "holaaa";
+    }
 
     // ----------------------------  ESCENA SELECCIÓN DE INICIO Y FINAL   ----------------------------------- 
     public InputField filaInicio;
@@ -107,7 +120,7 @@ public class BoardManager : MonoBehaviour {
     - Corroborar con datos del persona si es posible que esas coordenadas sean inicio y final
     */
 
-
+    
 
 
     // -----------------------------------  LECTURA DE TXT   ----------------------------------- 
@@ -230,8 +243,8 @@ public class BoardManager : MonoBehaviour {
     void InicializarLista(){
         gridPositions.Clear();
         //llenar lista con posibles posiciones para el tablero
-        for (int x = 0; x < columnas; x++){
-            for (int y = 0; y < filas; y++){
+        for (int x = 1; x < columnas -1; x++){
+            for (int y = 1; y < filas -1; y++){
                 //posibles posiciones para poner cosas
                 gridPositions.Add(new Vector3(x, y, 0f)); //añadir valores de x,y a la lista
             }
@@ -242,10 +255,11 @@ public class BoardManager : MonoBehaviour {
     void BoardSetup(){
         boardHolder = new GameObject("Board").transform;
         //valores negativos y suma para pintar borde   
+        Debug.Log("columnas: "+columnas+", filas:"+filas);
         for (int x = -1; x < columnas + 1; x++){
             for (int y = -1; y < filas + 1; y++ ){
                 //instanciar terrenos como piso
-                GameObject toInstantiate = lava;//[Random.Range(0, terreno.Length)];
+                GameObject toInstantiate = terrenosRandom[Random.Range(0, terrenosRandom.Length)];
 
                 //checar e instanciar paredes exteriores
                 if (x == -1 || x == columnas || y == -1 || y == filas ){

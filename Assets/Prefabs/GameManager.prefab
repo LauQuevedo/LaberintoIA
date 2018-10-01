@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1736907291753614}
+  m_IsPrefabAsset: 1
+--- !u!1 &1736907291753614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4570519078961410}
+  - component: {fileID: 114311445241355874}
+  - component: {fileID: 114928786351355164}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4570519078961410
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736907291753614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114311445241355874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736907291753614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06a2a75130b047018d7f974ef1c2dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardScript: {fileID: 0}
+--- !u!114 &114928786351355164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736907291753614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columnas: 8
+  filas: 8
+  v_filaInicio: 0
+  v_columnaInicio: 0
+  v_filaFinal: 0
+  v_columnaFinal: 0
+  numTerrenos: 0
+  tamColumnas: []
+  exit: {fileID: 1015132098278898, guid: d1d43a0728e904a2290372090d8475cd, type: 2}
+  player: []
+  paredExterior: {fileID: 1638062917837370, guid: a681f8e00131e49169eb429e84e6b632,
+    type: 2}
+  lava: {fileID: 1826398182002432, guid: a3dc0549ed88b4c83b560883e64966d4, type: 2}
+  agua: {fileID: 1377016929608796, guid: 9ebff2c53736d4faca0287a1ba5d12b2, type: 2}
+  campo: {fileID: 1452275906447338, guid: f6e5663b5247f4e6582a48cc3e7d19c0, type: 2}
+  muro: {fileID: 1776785753713862, guid: 92e3cbf5935794e14b951a142fb15b7c, type: 2}
+  tierra: {fileID: 1566330943652644, guid: de4d964a9ade94d9bbe03a6e98d36044, type: 2}
+  hielo: {fileID: 1021732622906988, guid: 8ee89dd2444554118a45c4c705be9089, type: 2}
+  madera: {fileID: 1629683873144196, guid: 682d89049844342f59f31b28e3366c42, type: 2}
+  montana: {fileID: 1218768190689186, guid: 685f7675859884a2a9f08266f27d767f, type: 2}
+  ladrillo: {fileID: 1417353152666384, guid: ca25e0b854a52425a9ffd4b104c7b253, type: 2}
+  terrenosRandom:
+  - {fileID: 1826398182002432, guid: a3dc0549ed88b4c83b560883e64966d4, type: 2}
+  - {fileID: 1776785753713862, guid: 92e3cbf5935794e14b951a142fb15b7c, type: 2}
+  - {fileID: 1218768190689186, guid: 685f7675859884a2a9f08266f27d767f, type: 2}
+  - {fileID: 1417353152666384, guid: ca25e0b854a52425a9ffd4b104c7b253, type: 2}
+  wallCount:
+    minimo: 5
+    maximo: 9
+  noPisos: {fileID: 0}
+  noFilas: {fileID: 0}
+  filaInicio: {fileID: 0}
+  columnaInicio: {fileID: 0}
+  filaFinal: {fileID: 0}
+  columnaFinal: {fileID: 0}
+  textoPermiso: {fileID: 0}
