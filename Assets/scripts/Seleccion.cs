@@ -18,7 +18,7 @@ public class Seleccion : MonoBehaviour
     {
         currentSelection = 1;
         sel = 1;
-        //button.onClick.AddListener(Select);
+        // button.onClick.AddListener(Select);
 
     }
 
@@ -31,7 +31,7 @@ public class Seleccion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
             Rotate(Direction.Left);
 
-        //Debug.Log(currentSelection);
+//        Debug.Log(currentSelection);
 
     }
 

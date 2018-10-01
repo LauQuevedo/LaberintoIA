@@ -8,6 +8,7 @@ using UnityEditor;
 using System.IO;
 using UnityEngine.SceneManagement;
 
+//Equipo 7
 
 public class BoardManager : Seleccion {
     [Serializable]
@@ -116,6 +117,11 @@ public class BoardManager : Seleccion {
             int filaFinalInt = Int32.Parse(filaFinal.text);
             v_filaFinal  = filaFinalInt;
             //columnas
+
+            if(columnasAbc.Contains(columnaInicio.text)){
+
+            }
+
             int columnaInt = Int32.Parse(columnaInicio.text);
             v_columnaInicio = columnaInt;
             int columnaFinalInt = Int32.Parse(columnaFinal.text);
@@ -247,7 +253,7 @@ public class BoardManager : Seleccion {
         numTerrenosMetodo();
 
         //convertir lista a arreglo
-        // tamColumnas = listaColumnas.ToArray();
+        // lista = listaColumnas.ToArray();
         // comprobarTamanoTablero(tamColumnas, filasTemp);
     }
 
