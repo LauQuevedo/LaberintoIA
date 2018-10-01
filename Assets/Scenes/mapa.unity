@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &606070739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1592,6 +1592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSelection: 0
+  totalCharacters: 6
+  button: {fileID: 0}
   columnas: 15
   filas: 15
   v_filaInicio: 0
@@ -1599,6 +1602,8 @@ MonoBehaviour:
   v_filaFinal: 0
   v_columnaFinal: 0
   numTerrenos: 0
+  isGood: 0
+  personajeSeleccionado: 0
   tamColumnas: []
   exit: {fileID: 0}
   player: []
@@ -1623,6 +1628,7 @@ MonoBehaviour:
   filaFinal: {fileID: 994385305}
   columnaFinal: {fileID: 1788404579}
   textoPermiso: {fileID: 541091920}
+  textoSimetria: {fileID: 0}
 --- !u!224 &1209545644
 RectTransform:
   m_ObjectHideFlags: 0

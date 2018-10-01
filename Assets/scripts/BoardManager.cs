@@ -6,8 +6,10 @@ using System.Collections.Generic;
 using Random = UnityEngine.Random;
 using UnityEditor;
 using System.IO;
+using UnityEngine.SceneManagement;
 
-public class BoardManager : MonoBehaviour {
+
+public class BoardManager : Seleccion {
     [Serializable]
     public class Count{
         public int minimo;
@@ -28,6 +30,8 @@ public class BoardManager : MonoBehaviour {
     public int v_filaFinal = 0;
     public int v_columnaFinal = 0;
     public int numTerrenos = 0;
+    public bool isGood = false;
+    public int personajeSeleccionado = 0;
     public string[] tamColumnas; //usada por verificarTamTablero()
     List<int> listaTerrenosId = new List<int>();
     //VARIABLES to hold los prefabs que irán en el tablero
@@ -56,6 +60,10 @@ public class BoardManager : MonoBehaviour {
     //track de todas las posibles posiciones, y si un objeto está en esa posición o no
     private List<Vector3> gridPositions = new List<Vector3>();
 
+
+    protected int personajeSelection;
+
+    
     // -----------------------------------  ESCENA SELECCIÓN DE TERRENOS   ----------------------------------- 
 
     // public Dropdown dropdown;
@@ -79,8 +87,10 @@ public class BoardManager : MonoBehaviour {
     public Text noPisos;
     public InputField noFilas;
 
-    public void Start(){
+    public void Awake(){
         //setValuesInfo();
+        // setPersonajeValue();
+        // Debug.Log("characterValue: " + myCharacterValue);
     }
 
     void setValuesInfo(){
@@ -93,6 +103,8 @@ public class BoardManager : MonoBehaviour {
     public InputField filaFinal;
     public InputField columnaFinal;
     public Text textoPermiso;
+    public Text textoSimetria;
+
     List<string> columnasAbc = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"};
 
     public void setgetCoordenadas(){
@@ -108,7 +120,9 @@ public class BoardManager : MonoBehaviour {
             v_columnaInicio = columnaInt;
             int columnaFinalInt = Int32.Parse(columnaFinal.text);
             v_columnaFinal = columnaFinalInt;
-            //textoPermiso.text = "coordenadas inicio: " + v_filaInicio + "," + v_columnaInicio+ "\ncoordenadas final: " + v_filaFinal + "," + v_columnaFinal;
+            textoPermiso.text = "coordenadas inicio: " + v_filaInicio + "," + v_columnaInicio+ "\ncoordenadas final: " + v_filaFinal + "," + v_columnaFinal;
+            SceneManager.LoadScene(4);
+
         }else{
             textoPermiso.text = "Tienes que ingresar todos los datos";
         }
@@ -164,11 +178,30 @@ public class BoardManager : MonoBehaviour {
             Debug.Log("Si es simétrico: " + filas.Length + "x" + tamColumnas.Length);
             LecturaTxt(path);
             tamanoTablero(filas.Length);
+           // textoPermiso.text = "Tienes que ingresar todos los datos";
+            isGood = true;
+            SceneManager.LoadScene(+1);
         }
         else
         {
+           // textoPermiso.text = "Tienes que ingresar todos los datos";
+            isGood = false;
             Debug.Log("No coinciden dimensiones de terreno, intentelo de nuevo");
         }
+    }
+
+    public void isTxtGood(){
+        Debug.Log("helloo");
+        if(isGood){
+            Debug.Log("siiii");
+            textoPermiso.text = "Todo bien";
+        }
+        else
+        {
+            Debug.Log("noooo");
+            textoPermiso.text = "Tienes que ingresar todos los datos";
+        }
+        
     }
 
     //retornar valor de fila y columna
