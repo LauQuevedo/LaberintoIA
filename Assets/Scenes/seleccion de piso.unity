@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -160,17 +160,17 @@ MonoBehaviour:
   madera: {fileID: 0}
   montana: {fileID: 0}
   ladrillo: {fileID: 0}
+  terrenosRandom: []
   wallCount:
     minimo: 5
     maximo: 9
+  noPisos: {fileID: 0}
+  noFilas: {fileID: 0}
   filaInicio: {fileID: 0}
   columnaInicio: {fileID: 0}
   filaFinal: {fileID: 0}
   columnaFinal: {fileID: 0}
   textoPermiso: {fileID: 0}
-  noPisos: {fileID: 0}
-  noFilas: {fileID: 0}
-  noColumnas: {fileID: 0}
 --- !u!224 &5854873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1850,6 +1850,7 @@ GameObject:
   - component: {fileID: 760196976}
   - component: {fileID: 760196975}
   - component: {fileID: 760196974}
+  - component: {fileID: 760196977}
   m_Layer: 0
   m_Name: Accept
   m_TagString: Untagged
@@ -1914,7 +1915,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 760196975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760196977}
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &760196975
@@ -1951,6 +1963,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 760196972}
   m_CullTransparentMesh: 0
+--- !u!114 &760196977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760196972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f3a896f1bc15a4aa9dba995aa87f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &761368791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,17 +2641,17 @@ MonoBehaviour:
   madera: {fileID: 0}
   montana: {fileID: 0}
   ladrillo: {fileID: 0}
+  terrenosRandom: []
   wallCount:
     minimo: 5
     maximo: 9
+  noPisos: {fileID: 0}
+  noFilas: {fileID: 0}
   filaInicio: {fileID: 0}
   columnaInicio: {fileID: 0}
   filaFinal: {fileID: 0}
   columnaFinal: {fileID: 0}
   textoPermiso: {fileID: 0}
-  noPisos: {fileID: 0}
-  noFilas: {fileID: 0}
-  noColumnas: {fileID: 0}
 --- !u!1 &1052160751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,17 +3408,17 @@ MonoBehaviour:
   madera: {fileID: 0}
   montana: {fileID: 0}
   ladrillo: {fileID: 0}
+  terrenosRandom: []
   wallCount:
     minimo: 5
     maximo: 9
+  noPisos: {fileID: 515031283}
+  noFilas: {fileID: 0}
   filaInicio: {fileID: 0}
   columnaInicio: {fileID: 0}
   filaFinal: {fileID: 0}
   columnaFinal: {fileID: 0}
   textoPermiso: {fileID: 0}
-  noPisos: {fileID: 515031283}
-  noFilas: {fileID: 0}
-  noColumnas: {fileID: 0}
 --- !u!1 &1333929642
 GameObject:
   m_ObjectHideFlags: 0
