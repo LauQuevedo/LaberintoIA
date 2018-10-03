@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4570519078961410}
   - component: {fileID: 114311445241355874}
   - component: {fileID: 114928786351355164}
+  - component: {fileID: 114181288165550478}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114181288165550478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736907291753614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c6d6af6307034f3e9c7de71a799a84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1736907291753614}
 --- !u!114 &114311445241355874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,25 +66,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 0}
+  playerFoodPoints: 100
+  playersTurn: 1
 --- !u!114 &114928786351355164
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736907291753614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columnas: 8
-  filas: 8
+  currentSelection: 0
+  totalCharacters: 6
+  button: {fileID: 0}
+  variablesGlobales: {fileID: 0}
+  tam: 0
+  columnas: 15
+  filas: 15
   v_filaInicio: 0
   v_columnaInicio: 0
   v_filaFinal: 0
   v_columnaFinal: 0
   numTerrenos: 0
+  isGood: 0
+  personajeSeleccionado: 0
   tamColumnas: []
+  listaTerrenosId: 
   exit: {fileID: 1015132098278898, guid: d1d43a0728e904a2290372090d8475cd, type: 2}
   player: []
   paredExterior: {fileID: 1638062917837370, guid: a681f8e00131e49169eb429e84e6b632,
@@ -90,6 +113,11 @@ MonoBehaviour:
   - {fileID: 1776785753713862, guid: 92e3cbf5935794e14b951a142fb15b7c, type: 2}
   - {fileID: 1218768190689186, guid: 685f7675859884a2a9f08266f27d767f, type: 2}
   - {fileID: 1417353152666384, guid: ca25e0b854a52425a9ffd4b104c7b253, type: 2}
+  floors:
+  - {fileID: 177044, guid: ed4c829589732490894350b134530050, type: 2}
+  - {fileID: 125636, guid: 74398dca0c1f64f34aab8ba7bdb6c527, type: 2}
+  - {fileID: 137908, guid: 41775b29042354678bcd58bb1a75871e, type: 2}
+  - {fileID: 106160, guid: 038998774947c4a8fa170d5b4492a7dd, type: 2}
   wallCount:
     minimo: 5
     maximo: 9
@@ -100,3 +128,4 @@ MonoBehaviour:
   filaFinal: {fileID: 0}
   columnaFinal: {fileID: 0}
   textoPermiso: {fileID: 0}
+  textoSimetria: {fileID: 0}

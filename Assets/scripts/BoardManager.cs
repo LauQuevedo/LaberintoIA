@@ -39,6 +39,7 @@ public class BoardManager : Seleccion {
     public int personajeSeleccionado = 0;
     public string[] tamColumnas; //usada por verificarTamTablero()
     public List<int> listaTerrenosId = new List<int>();
+    List<int> listaTerrenosCoord = new List<int>();
     //VARIABLES to hold los prefabs que irán en el tablero
     public GameObject exit;
     public GameObject[] player;
@@ -54,7 +55,8 @@ public class BoardManager : Seleccion {
     public GameObject montana;
     public GameObject ladrillo;
     public GameObject[] terrenosRandom;
-    
+    public GameObject[] floors;
+
 
     //delimitar el board
     private Transform boardHolder;
@@ -239,7 +241,6 @@ public class BoardManager : Seleccion {
         StreamReader reader = new StreamReader(path);
         string text = " ";
         //Debug.Log(reader.ReadToEnd());
-        List<int> listaTerrenosCoord = new List<int>();
         //otras variables
         string[] celdas;
 
@@ -306,11 +307,18 @@ public class BoardManager : Seleccion {
         boardHolder = new GameObject("Board").transform;
         //valores negativos y suma para pintar borde   
         Debug.Log("columnas: "+columnas+", filas:"+filas);
+
+
         for (int x = -1; x < columnas + 1; x++){
             for (int y = -1; y < filas + 1; y++ ){
                 //instanciar terrenos como piso
                 GameObject toInstantiate = terrenosRandom[Random.Range(0, terrenosRandom.Length)];
 
+
+
+                foreach(int coord in listaTerrenosCoord){
+
+                }   
                 //checar e instanciar paredes exteriores
                 if (x == -1 || x == columnas || y == -1 || y == filas ){
                     //instanciar randomly paredes

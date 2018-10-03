@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-public static GameManager instance = null;
-public BoardManager boardScript;
-public int playerFoodPoints = 0;
-[HideInInspector] public bool playersTurn = true;
+	public static GameManager instance = null;
+	public BoardManager boardScript;
+	public int playerFoodPoints = 100;
+	[HideInInspector] public bool playersTurn = true;
 
-private bool doingSetup;
-private int level = 1;
+	private bool doingSetup;
+	private int level = 1;
 
     // Use this for initialization
     void Awake () {
