@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -834,6 +834,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSelection: 0
+  totalCharacters: 6
+  button: {fileID: 0}
+  tam: 0
   columnas: 15
   filas: 15
   v_filaInicio: 0
@@ -842,6 +846,7 @@ MonoBehaviour:
   v_columnaFinal: 0
   numTerrenos: 0
   isGood: 0
+  personajeSeleccionado: 0
   tamColumnas: []
   exit: {fileID: 0}
   player: []
@@ -894,14 +899,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columnas: 15
-  filas: 15
+  currentSelection: 0
+  totalCharacters: 6
+  button: {fileID: 0}
+  tam: 0
+  columnas: 0
+  filas: 0
   v_filaInicio: 0
   v_columnaInicio: 0
   v_filaFinal: 0
   v_columnaFinal: 0
   numTerrenos: 0
   isGood: 0
+  personajeSeleccionado: 0
   tamColumnas: []
   exit: {fileID: 0}
   player: []
@@ -939,6 +949,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1409861781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409861783}
+  - component: {fileID: 1409861782}
+  m_Layer: 0
+  m_Name: mapita
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1409861782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409861781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ef1d354bbb2874387bb26179d20690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  broadManager: {fileID: 1241799960}
+  Tam: 0
+--- !u!4 &1409861783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409861781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 512, y: 384, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499959823
 GameObject:

@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 //Equipo 7
 
 public class BoardManager : Seleccion {
+    
     [Serializable]
     public class Count{
         public int minimo;
@@ -24,8 +25,11 @@ public class BoardManager : Seleccion {
     }
 
     //inicialización de variables para dimensión de gameboard
-    public int columnas = 15;
-    public int filas = 15;
+    public VariablesGlobales variablesGlobales; 
+
+    public int tam=0; //variable enviada a Variables glovales al inicio
+    public int columnas;
+    public int filas;
     public int v_filaInicio = 0;
     public int v_columnaInicio = 0;
     public int v_filaFinal = 0;
@@ -34,7 +38,7 @@ public class BoardManager : Seleccion {
     public bool isGood = false;
     public int personajeSeleccionado = 0;
     public string[] tamColumnas; //usada por verificarTamTablero()
-    List<int> listaTerrenosId = new List<int>();
+    public List<int> listaTerrenosId = new List<int>();
     //VARIABLES to hold los prefabs que irán en el tablero
     public GameObject exit;
     public GameObject[] player;
@@ -50,7 +54,7 @@ public class BoardManager : Seleccion {
     public GameObject montana;
     public GameObject ladrillo;
     public GameObject[] terrenosRandom;
-
+    
 
     //delimitar el board
     private Transform boardHolder;
@@ -88,12 +92,12 @@ public class BoardManager : Seleccion {
     public Text noPisos;
     public InputField noFilas;
 
-    public void Awake(){
+    //public void Awake(){
         //setValuesInfo();
         // setPersonajeValue();
         // Debug.Log("characterValue: " + myCharacterValue);
-    }
-
+   // }
+   
     void setValuesInfo(){
         noPisos.text = "holaaa";
     }
@@ -223,8 +227,11 @@ public class BoardManager : Seleccion {
         //asignación a variables globales
         columnas = tamano;
         filas = tamano;
+        tam=tamano;
+         //Debug.Log("el tamaño es" + tam);
         return tamano;
     }
+
 
     //Método obtiene id y número de terrenos 
     void LecturaTxt(string path){
@@ -278,10 +285,6 @@ public class BoardManager : Seleccion {
         return listaTerrenosId.Count;
     }
 
-
- 
-
-   
 
 
 
@@ -338,5 +341,11 @@ public class BoardManager : Seleccion {
 
         //posicionar el final
         Instantiate(exit, new Vector3(columnas - 1, filas - 1, 0f), Quaternion.identity);
+    }
+     void Update(){
+        tam=variablesGlobales.Tam;
+        listaTerrenosId=variablesGlobales.IdTerrenos;
+        personajeSeleccionado=variablesGlobales.Personaje;
+        // Debug.Log("helloo"+listaTerrenosId[2]);
     }
 }

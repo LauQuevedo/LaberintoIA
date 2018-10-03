@@ -56,7 +56,7 @@ public class Seleccion : MonoBehaviour
 
     }
 
-    public void ChangeScene()
+    public void ChangeScene();
     {
         // if (sel == 1)
         // {
