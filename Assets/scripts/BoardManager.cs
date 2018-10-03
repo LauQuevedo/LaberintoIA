@@ -42,6 +42,7 @@ public class BoardManager : Seleccion {
     List<int> listaTerrenosCoord = new List<int>();
     //VARIABLES to hold los prefabs que irán en el tablero
     public GameObject exit;
+    public GameObject inicio;
     public GameObject[] player;
     public GameObject paredExterior;
     //escoger terrenos
@@ -348,6 +349,7 @@ public class BoardManager : Seleccion {
         //LayoutTerrenos(); //falta implementarlo
 
         //posicionar el final
+        Instantiate(inicio, new Vector3(0, 0, 0f), Quaternion.identity);
         Instantiate(exit, new Vector3(columnas - 1, filas - 1, 0f), Quaternion.identity);
     }
      void Update(){
