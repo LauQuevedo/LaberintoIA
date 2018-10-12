@@ -25,21 +25,14 @@ public class BoardManager : Seleccion {
     }
 
     //inicialización de variables para dimensión de gameboard
-    public VariablesGlobales variablesGlobales; 
-
-    public int tam=0; //variable enviada a Variables glovales al inicio
-    public int columnas;
-    public int filas;
+    public VariablesGlobales variablesGlobales;
+    public int tam = 0; //variable enviada a Variables globales al inicio
     public int v_filaInicio = 0;
     public int v_columnaInicio = 0;
     public int v_filaFinal = 0;
     public int v_columnaFinal = 0;
     public int numTerrenos = 0;
-    public bool isGood = false;
     public int personajeSeleccionado = 0;
-    public string[] tamColumnas; //usada por verificarTamTablero()
-    public List<int> listaTerrenosId = new List<int>();
-    List<int> listaTerrenosCoord = new List<int>();
     //VARIABLES to hold los prefabs que irán en el tablero
     public GameObject exit;
     public GameObject inicio;
@@ -62,7 +55,16 @@ public class BoardManager : Seleccion {
     //delimitar el board
     private Transform boardHolder;
 
-////////////
+
+    ///// de subirMapa.cs
+    public int columnas;
+    public int filas;
+    // public bool isGood = false;
+    public List<int> listaTerrenosId = new List<int>();
+    List<int> listaTerrenosCoord = new List<int>();
+
+
+    ////////////
     //especificar rango para paredes
     public Count wallCount = new Count(5, 9);
     //track de todas las posibles posiciones, y si un objeto está en esa posición o no
@@ -158,134 +160,6 @@ public class BoardManager : Seleccion {
     
 
 
-    // -----------------------------------  LECTURA DE TXT   ----------------------------------- 
-
-    //explorer para seleccionar el txt desde el botón de una escena
-    public void OpenExplorer(){
-        string path = EditorUtility.OpenFilePanel("Overwrite with txt", "", "txt");
-        if (path != null){
-            //Debug.Log(path);
-            comprobarTamTablero(path);
-        }
-    }
-
-    void comprobarTamTablero(string path){
-        StreamReader reader = new StreamReader(path);
-        string text = " ";
-        bool coincide = true;
-        Debug.Log("Ruta: " + path);
-        //leer filas
-        string[] filas = File.ReadAllLines(path);
-        // leer primera fila
-        text = reader.ReadLine();
-
-        //leer filas de todo el archivo
-        while (text != null)
-        {
-            //dividir según delimitador
-            tamColumnas = text.Split(',');
-            //coincidencia
-            if (tamColumnas.Length != filas.Length)
-            {
-                coincide = false;
-                break;
-            }
-            //leer siguiente línea
-            text = reader.ReadLine();
-        }
-
-        if (coincide)
-        { //si coinciden filasXcolumnas
-            Debug.Log("Si es simétrico: " + filas.Length + "x" + tamColumnas.Length);
-            LecturaTxt(path);
-            tamanoTablero(filas.Length);
-           // textoPermiso.text = "Tienes que ingresar todos los datos";
-            isGood = true;
-            SceneManager.LoadScene(+1);
-        }
-        else
-        {
-           // textoPermiso.text = "Tienes que ingresar todos los datos";
-            isGood = false;
-            Debug.Log("No coinciden dimensiones de terreno, intentelo de nuevo");
-        }
-    }
-
-    public void isTxtGood(){
-        Debug.Log("helloo");
-        if(isGood){
-            Debug.Log("siiii");
-            textoPermiso.text = "Todo bien";
-        }
-        else
-        {
-            Debug.Log("noooo");
-            textoPermiso.text = "Tienes que ingresar todos los datos";
-        }
-        
-    }
-
-    //retornar valor de fila y columna
-    int tamanoTablero(int tamano){
-        //asignación a variables globales
-        columnas = tamano;
-        filas = tamano;
-        tam=tamano;
-         //Debug.Log("el tamaño es" + tam);
-        return tamano;
-    }
-
-
-    //Método obtiene id y número de terrenos 
-    void LecturaTxt(string path){
-        //leer archivo
-        StreamReader reader = new StreamReader(path);
-        string text = " ";
-        //Debug.Log(reader.ReadToEnd());
-        //otras variables
-        string[] celdas;
-
-        // leer primera linea
-        text = reader.ReadLine(); //primera fila
-        //leer todo el archivo
-        while (text != null)
-        {
-            //dividir según delimitador
-            celdas = text.Split(',');
-            //leer cada valor ya dividido por delimitador coma
-            for (int i = 0; i < celdas.Length; i++)
-            {
-                int celdaCasteo = Int32.Parse(celdas[i]);
-                //1. almacenar celda en lista total de los terrenos
-                listaTerrenosCoord.Add(celdaCasteo);
-                //2. almacenar id de terrenos (si no hay coincidencia previa)
-                compararTerrenoId(celdaCasteo);
-            }
-            //leer siguiente línea
-            text = reader.ReadLine();
-        }
-        //terminó de leer el archivo
-        reader.Close();
-        //retornar # de terrenos 
-        numTerrenosMetodo();
-
-        //convertir lista a arreglo
-        // lista = listaColumnas.ToArray();
-        // comprobarTamanoTablero(tamColumnas, filasTemp);
-    }
-
-    void compararTerrenoId(int id)
-    {
-        //insertar si no existe
-        if (!listaTerrenosId.Contains(id))
-            listaTerrenosId.Add(id);
-    }
-
-    int numTerrenosMetodo()
-    {
-        Debug.Log("Número de terrenos: " + listaTerrenosId.Count);
-        return listaTerrenosId.Count;
-    }
 
 
 

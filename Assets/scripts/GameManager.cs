@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour {
 
 	private bool doingSetup;
 	private int level = 1;
+
+	//subir txt variables
+    public Text textoTxtAceptado;
+	public GameObject ButtonContinuar;
+
 
     // Use this for initialization
     void Awake () {
@@ -26,6 +31,8 @@ public class GameManager : MonoBehaviour {
 		boardScript = GetComponent<BoardManager>();
 		InitGame();
 	}
+
+   
 
 	private void OnLevelWasLoaded(int index){
 		level++;
@@ -47,4 +54,27 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+    // SUBIR TXT
+    public void isTxtGood(bool resultado, string[] filas, string[] columnas, int terrenos)
+    {
+        if (resultado)
+        {
+            textoTxtAceptado.text = "Tu laberinto es de " + filas.Length + "x" + columnas.Length + "\nIncluye " + terrenos + " tipos de terrenos";
+            ButtonContinuar.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("El archivo txt no contiene un terreno rectangular");
+            textoTxtAceptado.text = "El archivo txt no contiene un terreno rectangular";
+            ButtonContinuar.SetActive(false);
+        }
+
+    }
+    // CAMBIAR DE ESCENA 
+	public void cambiarEscena(){
+        SceneManager.LoadScene(+1);
+	}
+
+
+
 }
