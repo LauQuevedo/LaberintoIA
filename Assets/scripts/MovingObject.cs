@@ -69,6 +69,7 @@ public abstract class MovingObject : MonoBehaviour
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
 
         //While that distance is greater than a very small amount (Epsilon, almost zero):
+        Debug.Log("square: "+sqrRemainingDistance + ">" +float.Epsilon);
         while (sqrRemainingDistance > float.Epsilon)
         {
             //Find a new position proportionally closer to the end, based on the moveTime

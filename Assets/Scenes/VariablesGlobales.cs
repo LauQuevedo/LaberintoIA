@@ -17,9 +17,9 @@ public class VariablesGlobales : MonoBehaviour {
 	}
 
 	void Update() {
-		Personaje=broadManager.personajeSeleccionado;
-		Tam=broadManager.tam;
-		IdTerrenos=broadManager.listaTerrenosId;
+		//Personaje=broadManager.personajeSeleccionado;
+		//Tam=broadManager.tam;
+		//IdTerrenos=broadManager.listaTerrenosId;
 		//Debug.Log("helloo"+broadManager.listaTerrenosId[2]);
     
 	}

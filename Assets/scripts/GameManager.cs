@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour {
 	//subir txt variables
     public Text textoTxtAceptado;
 	public GameObject ButtonContinuar;
-
+	//variables referentes a terreno
+	private subirMapa subirMapa;
+    public static int columnasG, filasG, numeroTerrenosG;
+    //variables para colocar casilla inicio, fin
+    public static int xFinal, xInicio, yFinal, yInicio; 
 
     // Use this for initialization
     void Awake () {
@@ -32,6 +36,12 @@ public class GameManager : MonoBehaviour {
 		InitGame();
 	}
 
+	void Start(){
+        //inicializar variables
+        columnasG = 0;
+        filasG = 0;
+        numeroTerrenosG = 0;
+	}
    
 
 	private void OnLevelWasLoaded(int index){
@@ -41,7 +51,6 @@ public class GameManager : MonoBehaviour {
 
 	void InitGame(){
 		doingSetup = true;
-		
 		boardScript.SetupScene();
 	}
 
@@ -54,24 +63,46 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
-    // SUBIR TXT
+	
+    // ----------------------------------------------------------------------------------
+    // ---------------------------------- SUBIR TXT -------------------------------------
+    // ----------------------------------------------------------------------------------
+
     public void isTxtGood(bool resultado, string[] filas, string[] columnas, int terrenos)
     {
         if (resultado)
         {
-            textoTxtAceptado.text = "Tu laberinto es de " + filas.Length + "x" + columnas.Length + "\nIncluye " + terrenos + " tipos de terrenos";
+            //asignación de variables obtenidas a variable global de gameManager
+            filasG = filas.Length;
+            columnasG = columnas.Length;
+            numeroTerrenosG = terrenos;
+			//asignación de texto informativo en escena subirTxt
+            textoTxtAceptado.text = "Tu laberinto es de " + filasG + "x" + columnasG + "\nIncluye " + numeroTerrenosG + " tipos de terrenos";
             ButtonContinuar.SetActive(true);
         }
         else
         {
-            Debug.Log("El archivo txt no contiene un terreno rectangular");
+            //asignación de texto informativo en escena subirTxt
             textoTxtAceptado.text = "El archivo txt no contiene un terreno rectangular";
             ButtonContinuar.SetActive(false);
         }
-
     }
-    // CAMBIAR DE ESCENA 
-	public void cambiarEscena(){
+
+    // ----------------------------------------------------------------------------------
+    // -------------------------- COORDENADAS INICIO Y FIN ------------------------------
+    // ----------------------------------------------------------------------------------
+	public void isInicioFinGood(){
+		
+	}
+
+
+
+
+
+    // ----------------------------------------------------------------------------------
+    // -------------------------------- CAMBIAR ESCENA ----------------------------------
+    // ----------------------------------------------------------------------------------
+    public void cambiarEscena(){
         SceneManager.LoadScene(+1);
 	}
 

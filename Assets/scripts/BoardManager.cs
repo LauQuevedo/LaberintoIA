@@ -27,10 +27,7 @@ public class BoardManager : Seleccion {
     //inicialización de variables para dimensión de gameboard
     public VariablesGlobales variablesGlobales;
     public int tam = 0; //variable enviada a Variables globales al inicio
-    public int v_filaInicio = 0;
-    public int v_columnaInicio = 0;
-    public int v_filaFinal = 0;
-    public int v_columnaFinal = 0;
+
     public int numTerrenos = 0;
     public int personajeSeleccionado = 0;
     //VARIABLES to hold los prefabs que irán en el tablero
@@ -107,57 +104,7 @@ public class BoardManager : Seleccion {
         noPisos.text = "holaaa";
     }
 
-    // ----------------------------  ESCENA SELECCIÓN DE INICIO Y FINAL   ----------------------------------- 
-    public InputField filaInicio;
-    public InputField columnaInicio;
-    public InputField filaFinal;
-    public InputField columnaFinal;
-    public Text textoPermiso; //muestra 
-    public Text textoSimetria;
 
-    List<string> columnasAbc = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"};
-
-    public void setgetCoordenadas(){
-
-        if(filaInicio.text != "" && columnaInicio.text != "" && filaFinal.text != "" && columnaFinal.text != ""){
-            //definir coordenadas
-            int filaInt = Int32.Parse(filaInicio.text);
-            v_filaInicio = filaInt;
-            int filaFinalInt = Int32.Parse(filaFinal.text);
-            v_filaFinal  = filaFinalInt;
-            //columnas
-
-            if(columnasAbc.Contains(columnaInicio.text)){ // Contains(InputEscena.text) columnaInicio y columnaFinal
-                //evitar case sentivity para ponerlos mayusculas
-                //comparar con lista columnasAbc para obtener su indice
-                //y guardarlo en v_columnaFinal/Inicio el indice
-            }
-
-            // y después v_columnaFinal/Inicio = variableInt;
-
-            //no hacer caso
-            // int columnaInt = Int32.Parse(columnaInicio.text);
-            // v_columnaInicio = columnaInt;
-
-            // int columnaFinalInt = Int32.Parse(columnaFinal.text);
-            // v_columnaFinal = columnaFinalInt;
-
-
-            textoPermiso.text = "coordenadas inicio: " + v_filaInicio + "," + v_columnaInicio+ "\ncoordenadas final: " + v_filaFinal + "," + v_columnaFinal;
-            SceneManager.LoadScene(4);
-
-        }else{
-            textoPermiso.text = "Tienes que ingresar todos los datos";
-        }
-        
-    }
-
-    /* MISSING:
-    - Aceptar en columnas valores alfabeticos y castearlos a numerico
-    - Corroborar con datos del persona si es posible que esas coordenadas sean inicio y final
-    */
-
-    
 
 
 
@@ -226,10 +173,11 @@ public class BoardManager : Seleccion {
         Instantiate(inicio, new Vector3(0, 0, 0f), Quaternion.identity);
         Instantiate(exit, new Vector3(columnas - 1, filas - 1, 0f), Quaternion.identity);
     }
+
      void Update(){
-        tam=variablesGlobales.Tam;
-        listaTerrenosId=variablesGlobales.IdTerrenos;
-        personajeSeleccionado=variablesGlobales.Personaje;
+        // tam=variablesGlobales.Tam;
+        // listaTerrenosId=variablesGlobales.IdTerrenos;
+        // personajeSeleccionado=variablesGlobales.Personaje;
         // Debug.Log("helloo"+listaTerrenosId[2]);
     }
 }

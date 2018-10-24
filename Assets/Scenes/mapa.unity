@@ -1589,46 +1589,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1209545642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4218cb1a9f4b147e59f376665850cf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSelection: 0
-  totalCharacters: 6
-  button: {fileID: 0}
-  columnas: 15
-  filas: 15
   v_filaInicio: 0
   v_columnaInicio: 0
   v_filaFinal: 0
   v_columnaFinal: 0
-  numTerrenos: 0
-  isGood: 0
-  personajeSeleccionado: 0
-  tamColumnas: []
-  exit: {fileID: 0}
-  player: []
-  paredExterior: {fileID: 0}
-  lava: {fileID: 0}
-  agua: {fileID: 0}
-  campo: {fileID: 0}
-  muro: {fileID: 0}
-  tierra: {fileID: 0}
-  hielo: {fileID: 0}
-  madera: {fileID: 0}
-  montana: {fileID: 0}
-  ladrillo: {fileID: 0}
-  terrenosRandom: []
-  wallCount:
-    minimo: 5
-    maximo: 9
-  noPisos: {fileID: 0}
-  noFilas: {fileID: 0}
   filaInicio: {fileID: 1141338834}
   columnaInicio: {fileID: 1614103802}
   filaFinal: {fileID: 994385305}
   columnaFinal: {fileID: 1788404579}
   textoPermiso: {fileID: 541091920}
-  textoSimetria: {fileID: 0}
 --- !u!224 &1209545644
 RectTransform:
   m_ObjectHideFlags: 0

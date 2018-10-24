@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SubirTxt.unity
     guid: 299785ad9b47976419ee061b141b4c01
   - enabled: 1
-    path: Assets/Scenes/personajes sprites.unity
-    guid: 55bbcf2ae354fcb428c52f65bb3be1a7
-  - enabled: 1
-    path: Assets/Scenes/seleccion de piso.unity
+    path: Assets/Scenes/seleccion_piso.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/mapa.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/seleccion_personaje.unity
+    guid: 55bbcf2ae354fcb428c52f65bb3be1a7
   - enabled: 1
     path: Assets/Scenes/juego.unity
     guid: 4f3c447efffe64cb38ac16e24e3fafef

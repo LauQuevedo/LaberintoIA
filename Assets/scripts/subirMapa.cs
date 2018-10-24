@@ -13,6 +13,7 @@ using System.Linq;
 
 public class subirMapa : MonoBehaviour {
 
+    //instancia de GameManager.cs
 	private GameManager gameManager;
     public int tam = 0; //variable enviada a Variables glovales al inicio
     public int columnas, filas, numeroTerrenos;
@@ -156,7 +157,6 @@ public class subirMapa : MonoBehaviour {
 
     int numTerrenosMetodo()
     {
-        
         Debug.Log("Número de terrenos: " + listaTerrenosId.Count);
         return listaTerrenosId.Count;
     }
