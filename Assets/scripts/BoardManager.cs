@@ -25,6 +25,10 @@ public class BoardManager : Seleccion {
     }
 
     //inicialización de variables para dimensión de gameboard
+   
+   
+   public string texto;
+   
     public VariablesGlobales variablesGlobales;
     public int tam = 0; //variable enviada a Variables globales al inicio
 
@@ -47,8 +51,8 @@ public class BoardManager : Seleccion {
     public GameObject ladrillo;
     public GameObject[] terrenosRandom;
     public GameObject[] floors;
-
-
+    public GameObject Info;
+    
     //delimitar el board
     private Transform boardHolder;
 
@@ -124,6 +128,8 @@ public class BoardManager : Seleccion {
          }
     }
 
+
+
     //definición de pared exteriores y floor
     void BoardSetup(){
         boardHolder = new GameObject("Board").transform;
@@ -135,9 +141,7 @@ public class BoardManager : Seleccion {
             for (int y = -1; y < filas + 1; y++ ){
                 //instanciar terrenos como piso
                 GameObject toInstantiate = terrenosRandom[Random.Range(0, terrenosRandom.Length)];
-
-
-
+                
                 foreach(int coord in listaTerrenosCoord){
 
                 }   
@@ -154,7 +158,6 @@ public class BoardManager : Seleccion {
             }
         }
     }
-
 
     //posicionar objetos en el tablero
     void LayoutTerrenos(GameObject tipoTerreno){
