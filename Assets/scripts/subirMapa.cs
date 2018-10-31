@@ -83,14 +83,14 @@ public class subirMapa : MonoBehaviour {
             // textoPermiso.text = "Tienes que ingresar todos los datos";
             //retornar # de terrenos 
             numeroTerrenos = numTerrenosMetodo();
-            gameManager.isTxtGood(coincide, filas, tamColumnasBase, numeroTerrenos);
+            gameManager.isTxtGood(coincide, filas, tamColumnasBase, numeroTerrenos, listaTerrenosId);
 
             //SceneManager.LoadScene(+1);
         }
         else
         {
             // textoPermiso.text = "Tienes que ingresar todos los datos";
-            gameManager.isTxtGood(coincide, filas, tamColumnasBase, 0);
+            gameManager.isTxtGood(coincide, filas, tamColumnasBase, 0, listaTerrenosId);
             
             Debug.Log("No coinciden dimensiones de terreno, intentelo de nuevo");
         }
