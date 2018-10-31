@@ -11,13 +11,15 @@ public class GetCoordenadas : MonoBehaviour {
     public int v_columnaInicio = 0;
     public int v_filaFinal = 0;
     public int v_columnaFinal = 0;
-
+    public int v_filaBus = 0;
 	// Use this for initialization
 	void Start () {
 		
 	}
 
     // ----------------------------  ESCENA SELECCIÓN DE INICIO Y FINAL   ----------------------------------- 
+    public InputField filaBuscar;
+    public InputField ColBuscar;
     public InputField filaInicio;
     public InputField columnaInicio;
     public InputField filaFinal;
@@ -65,6 +67,36 @@ public class GetCoordenadas : MonoBehaviour {
     - Aceptar en columnas valores alfabeticos y castearlos a numerico
     - Corroborar con datos del personaje si es posible que esas coordenadas sean inicio y final
     */
+ public void Buscar()
+    {
 
+        if (filaBuscar.text != "" && ColBuscar.text != "")
+        {
+            //definir coordenadas
+            int filaIntBus = Int32.Parse(filaBuscar.text);
+            v_filaBus = filaIntBus;
+            //columnas
+
+            //corroborar que los valores sean válidos
+
+
+
+            //mostrar valores si son correctos
+            textoPermiso.text = "coordenadas Ingresadas: " + v_filaBus + "," + ColBuscar.text ;
+			
+            //mostrar botón para continuar
+
+
+            // SceneManager.LoadScene(4);
+
+
+
+        }
+        else
+        {
+            textoPermiso.text = "Tienes que ingresar todos los datos";
+        }
+
+    }
 
 }
