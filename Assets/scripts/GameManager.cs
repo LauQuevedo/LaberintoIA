@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	public string Peso;
+	public string Visitas;
+
 	public static GameManager instance = null;
 	public BoardManager boardScript;
 	public int playerFoodPoints = 100;
