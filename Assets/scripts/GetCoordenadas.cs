@@ -12,7 +12,7 @@ public class GetCoordenadas : MonoBehaviour {
     public int v_columnaInicio = 0;
     public int v_filaFinal = 0;
     public int v_columnaFinal = 0;
-<<<<<<< HEAD
+    public int v_filaBus = 0;
 
     private GameManager gameManager;
 
@@ -21,12 +21,7 @@ public class GetCoordenadas : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-=======
-    public int v_filaBus = 0;
-	// Use this for initialization
-	void Start () {
->>>>>>> 3b7e06aea8395bdb84e845b963927dd1459bdbbf
-		
+        	
 	}
 
     // ----------------------------  ESCENA SELECCIÓN DE INICIO Y FINAL   ----------------------------------- 

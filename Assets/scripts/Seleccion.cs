@@ -49,7 +49,7 @@ public class Seleccion : MonoBehaviour
             currentSelection = 6;
     }
 
-    private void Select()
+    public void Select()
     {
         print("You selected " + currentSelection);
 		ChangeScene();
@@ -60,7 +60,7 @@ public class Seleccion : MonoBehaviour
         // if (sel == 1)
         // {
 			Debug.Log("Cambio de escena");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
         // }
     }
 

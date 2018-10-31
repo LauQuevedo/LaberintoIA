@@ -146,15 +146,15 @@ MonoBehaviour:
   numeroTerrenos: 12
   listaTerrenosId: 
   dropdown0: {fileID: 1470571526}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
+  dropdown1: {fileID: 974513780}
+  dropdown2: {fileID: 2073747796}
+  dropdown3: {fileID: 328548551}
+  dropdown4: {fileID: 16284616}
+  dropdown5: {fileID: 910093848}
+  dropdown6: {fileID: 1585896486}
+  dropdown7: {fileID: 932486494}
+  dropdown8: {fileID: 1760281463}
+  dropdown9: {fileID: 744001810}
 --- !u!224 &5854873
 RectTransform:
   m_ObjectHideFlags: 0

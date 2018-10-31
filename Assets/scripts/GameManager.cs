@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		boardScript = GetComponent<BoardManager>();
-		// InitGame();
+		//InitGame();
 	}
 
 	void Start(){
@@ -51,8 +51,8 @@ public class GameManager : MonoBehaviour {
    
 
 	private void OnLevelWasLoaded(int index){
-		level++;
-		InitGame();
+		//level++;
+		//InitGame();
 	}
 
 	void InitGame(){

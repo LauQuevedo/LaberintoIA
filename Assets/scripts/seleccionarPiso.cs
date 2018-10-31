@@ -109,7 +109,15 @@ public class seleccionarPiso : MonoBehaviour {
 
 	void rellenarDropdowns(){
 		dropdown0.AddOptions(terrenos);
-		
+        dropdown1.AddOptions(terrenos);
+        dropdown2.AddOptions(terrenos);
+        dropdown3.AddOptions(terrenos);
+        dropdown4.AddOptions(terrenos);
+        dropdown5.AddOptions(terrenos);
+        dropdown6.AddOptions(terrenos);
+        dropdown7.AddOptions(terrenos);
+        dropdown8.AddOptions(terrenos);
+        dropdown9.AddOptions(terrenos);
 	}
 
 	

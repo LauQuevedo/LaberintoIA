@@ -143,17 +143,19 @@ public class subirMapa : MonoBehaviour {
         // comprobarTamanoTablero(tamColumnas, filasTemp);
     }
 
-    void compararTerrenoId(int id)
-    {
+    void compararTerrenoId(int id){
         //insertar si no existe
         if (!listaTerrenosId.Contains(id))
             listaTerrenosId.Add(id);
     }
 
-    int numTerrenosMetodo()
-    {
+    int numTerrenosMetodo(){
         Debug.Log("Número de terrenos: " + listaTerrenosId.Count);
         return listaTerrenosId.Count;
+    }
+
+    public void cambiarEscena(){
+        SceneManager.LoadScene(+1, LoadSceneMode.Single);
     }
 
 }
