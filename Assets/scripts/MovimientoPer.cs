@@ -4,7 +4,8 @@ using UnityEngine;
 
 
 public class MovimientoPer : MonoBehaviour {
-	
+	public int contx=0;
+	public int conty=0;
 	Animator anim;
 	Vector3 TargetPosition;
 	Direction direction;
@@ -25,27 +26,32 @@ public class MovimientoPer : MonoBehaviour {
 			{
 				
 				if(axisDirection.x > 0)
-				{
+				{	if(contx<14){
 					//direction = Direction.right;
 					TargetPosition += Vector3.right;
+					contx++;}
 				}
 				else{
+					if(contx>0){
 					//direction = Direction.left;
 					TargetPosition-=Vector3.right;
+					contx--;}
 				}
 			
 			}
 			else
 			{
 				if(axisDirection.y>0)
-				{
+				{ if(conty < 14){
 					//direction = Direction.up;
 					TargetPosition += Vector3.up;
+					conty++;}
 				}
 				else
-				{
+				{if(conty > 0){
 					//direction = Direction.up;
 					TargetPosition -= Vector3.up;	
+					conty--;}
 				}
 			}
 		}
