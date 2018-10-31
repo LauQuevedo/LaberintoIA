@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	//variables referentes a terreno
 	private subirMapa subirMapa;
     public static int columnasG, filasG, numeroTerrenosG;
+    public static List<int> listaTerrenosId = new List<int>();
     //variables para colocar casilla inicio, fin
     public static int xFinal, xInicio, yFinal, yInicio; 
 
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour {
     // ---------------------------------- SUBIR TXT -------------------------------------
     // ----------------------------------------------------------------------------------
 
-    public void isTxtGood(bool resultado, string[] filas, string[] columnas, int terrenos)
+    public void isTxtGood(bool resultado, string[] filas, string[] columnas, int terrenos, List<int> terrenosId)
     {
         if (resultado)
         {
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour {
             filasG = filas.Length;
             columnasG = columnas.Length;
             numeroTerrenosG = terrenos;
+            listaTerrenosId = terrenosId;
 			//asignación de texto informativo en escena subirTxt
             textoTxtAceptado.text = "Tu laberinto es de " + filasG + "x" + columnasG + "\nIncluye " + numeroTerrenosG + " tipos de terrenos";
             ButtonContinuar.SetActive(true);
