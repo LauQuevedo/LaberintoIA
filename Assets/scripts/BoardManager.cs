@@ -28,7 +28,7 @@ public class BoardManager : Seleccion {
    
    
    public string texto;
-   
+   public int peso;//int num=10; string str=Convert.ToString(num);
     public VariablesGlobales variablesGlobales;
     public int tam = 0; //variable enviada a Variables globales al inicio
 
