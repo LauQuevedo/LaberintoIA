@@ -20,9 +20,11 @@ public class GameManager : MonoBehaviour {
 	//subir txt variables
     public Text textoTxtAceptado;
 	public GameObject ButtonContinuar;
-	//variables referentes a terreno
-	private subirMapa subirMapa;
+    public GameObject ButtonContinuarCoordenada;
+    //variables referentes a terreno
+    private subirMapa subirMapa;
     public static int columnasG, filasG, numeroTerrenosG;
+    public static int columnaFinalG, columnaInicioG, filaFinalG, filaInicioG;
     public static List<int> listaTerrenosId = new List<int>();
     //variables para colocar casilla inicio, fin
     public static int xFinal, xInicio, yFinal, yInicio; 
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		boardScript = GetComponent<BoardManager>();
-		InitGame();
+		// InitGame();
 	}
 
 	void Start(){
@@ -96,9 +98,19 @@ public class GameManager : MonoBehaviour {
     // ----------------------------------------------------------------------------------
     // -------------------------- COORDENADAS INICIO Y FIN ------------------------------
     // ----------------------------------------------------------------------------------
-	public void isInicioFinGood(){
-		
-	}
+	public void isInicioFinGood(bool resultado, int filaInicio, int filaFinal, string columnaInicio, string columnaFinal){
+        if(resultado){
+            filaInicioG = filaInicio;
+            filaFinalG = filaFinal;
+            //asignación de texto informativo en escena subirTxt
+            Debug.Log("Se ha aceptado la coordenada");
+            // textoTxtAceptado.text = "Tu laberinto es de " + filasG + "x" + columnasG + "\nIncluye " + numeroTerrenosG + " tipos de terrenos";
+            ButtonContinuarCoordenada.SetActive(true);
+        }else{
+            ButtonContinuarCoordenada.SetActive(false);
+        }
+       
+    }
 
 
 

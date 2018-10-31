@@ -56,12 +56,11 @@ public class Seleccion : MonoBehaviour
 
     }
 
-    public void ChangeScene()
-    {
+    public void ChangeScene(){
         // if (sel == 1)
         // {
 			Debug.Log("Cambio de escena");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         // }
     }
 

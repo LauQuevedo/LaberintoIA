@@ -27,16 +27,12 @@ public class subirMapa : MonoBehaviour {
     // -----------------------------------  LECTURA DE TXT   ----------------------------------- 
 
     //explorer para seleccionar el txt desde el botón de una escena
-    public void OpenExplorer()
-    {
-
-
+    public void OpenExplorer(){
         //inicializar lista
         if(listaTerrenosId.Any()){
             listaTerrenosId.Clear();
         }
         
-
         string path = EditorUtility.OpenFilePanel("Overwrite with txt", "", "txt");
         if (path != null)
         {
@@ -91,7 +87,6 @@ public class subirMapa : MonoBehaviour {
         {
             // textoPermiso.text = "Tienes que ingresar todos los datos";
             gameManager.isTxtGood(coincide, filas, tamColumnasBase, 0, listaTerrenosId);
-            
             Debug.Log("No coinciden dimensiones de terreno, intentelo de nuevo");
         }
     }
