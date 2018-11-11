@@ -8,7 +8,7 @@ public class seleccionarPiso : MonoBehaviour {
 	//texto informativo
     public Text textoMostrar;
     public Text numero_codigos;
-    public int numeroTerrenos;
+    public int numeroTerrenos = 0;
     public List<int> listaTerrenosId = new List<int>();
     //dropdowns
     List<string> terrenos = new List<string>() { "Selecciona", "Lava", "Agua", "Campo", "Muro", "Tierra", "Hielo", "Madera", "Montaña", "Ladrillo" };
@@ -25,33 +25,36 @@ public class seleccionarPiso : MonoBehaviour {
 	public Dropdown dropdown9;
 
 
-    // Use this for initialization
-    void Start () {
-		//mostrar número de terrenos
-		numeroTerrenos = GameManager.numeroTerrenosG;
-        textoMostrar.text = numeroTerrenos + " tipos de terrenos encontrados ";
+    void Awake(){
+        //  textoMostrar.text = numeroTerrenos + " tipos de terrenos encontrados ";
+        //mostrar número de terrenos
+        numeroTerrenos = GameManager.numeroTerrenosG;
         //mostrar código
         listaTerrenosId = GameManager.listaTerrenosId;
-        Debug.Log(listaTerrenosId);
-        foreach (int el in listaTerrenosId){
-			Debug.Log(el);
-    	}
-
-	
-
-
+        // Debug.Log(listaTerrenosId);
+        // foreach (int el in listaTerrenosId){
+        //     Debug.Log(el);
+        // }
         numero_codigos.text = "1\n2\n3\n4\n";
-		//mostrar dropdowns 
-		mostrarDropdown(numeroTerrenos);
+        
+
+
+        
+    }
+
+
+    // Use this for initialization
+    void Start () {
+        //mostrar dropdowns 
+        mostrarDropdown(numeroTerrenos);
         //rellenar dropdowns
         rellenarDropdowns();
 
-
         //Añadir listener para valor de dropdowns
-        dropdown0.onValueChanged.AddListener(delegate{
+        dropdown0.onValueChanged.AddListener(delegate
+        {
             obtenerValorDropdown(dropdown0);
         });
-
  
 
     }
