@@ -123,20 +123,20 @@ GameObject:
   - component: {fileID: 5854873}
   - component: {fileID: 5854872}
   - component: {fileID: 5854874}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &5854872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5854871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5854871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b06a2a75130b047018d7f974ef1c2dfe, type: 3}
   m_Name: 
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
+  textoMostrar: {fileID: 1515233319}
+  numero_codigos: {fileID: 1810546154}
   numeroTerrenos: 0
   listaTerrenosId: 
   dropdown0: {fileID: 16284616}
@@ -1146,14 +1146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
   numeroTerrenos: 0
   listaTerrenosId: 
-  dropdown0: {fileID: 328548551}
+  dropdown0: {fileID: 0}
   dropdown1: {fileID: 0}
   dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
+  dropdown3: {fileID: 328548551}
   dropdown4: {fileID: 0}
   dropdown5: {fileID: 0}
   dropdown6: {fileID: 0}
@@ -1417,6 +1417,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -1482,8 +1483,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2.3335}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
+  numeroTerrenos: 0
+  listaTerrenosId: 
+  dropdown0: {fileID: 1470571526}
+  dropdown1: {fileID: 974513780}
+  dropdown2: {fileID: 2073747796}
+  dropdown3: {fileID: 328548551}
+  dropdown4: {fileID: 16284616}
+  dropdown5: {fileID: 910093848}
+  dropdown6: {fileID: 1585896486}
+  dropdown7: {fileID: 932486494}
+  dropdown8: {fileID: 1760281463}
+  dropdown9: {fileID: 744001810}
 --- !u!1 &628473478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1820,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 665902159}
+  - {fileID: 1317007455}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1841,8 +1868,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 760196977}
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1098140266}
+        m_MethodName: cambiarEscena
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2075,7 +2102,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5854872}
+      objectReference: {fileID: 534669906}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2083,22 +2110,32 @@ Prefab:
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: obtenerValorDropdown
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_Name
       value: Dropdown0
       objectReference: {fileID: 0}
+    - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.UI.Dropdown, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1470571526}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
   m_IsPrefabAsset: 0
@@ -2177,6 +2214,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869589244}
   m_CullTransparentMesh: 0
+--- !u!1001 &873425236
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439450923340296, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114244978365915572, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: b64438edd1e9c44c8aab7e425ccbdda4, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &877161429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,7 +2850,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5854872}
+      objectReference: {fileID: 534669906}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2774,22 +2858,32 @@ Prefab:
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: obtenerValorDropdown
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_Name
       value: Dropdown1
       objectReference: {fileID: 0}
+    - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.UI.Dropdown, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 974513780}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
   m_IsPrefabAsset: 0
@@ -2820,12 +2914,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
   numeroTerrenos: 0
   listaTerrenosId: 
-  dropdown0: {fileID: 974513780}
-  dropdown1: {fileID: 0}
+  dropdown0: {fileID: 0}
+  dropdown1: {fileID: 974513780}
   dropdown2: {fileID: 0}
   dropdown3: {fileID: 0}
   dropdown4: {fileID: 0}
@@ -3117,6 +3211,35 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1061615294}
   m_CullTransparentMesh: 0
+--- !u!1 &1084216388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 873425236}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084216389}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1084216389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 873425236}
+  m_GameObject: {fileID: 1084216388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1098140267}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088059455
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,6 +3310,61 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1088059455}
   m_CullTransparentMesh: 0
+--- !u!1 &1098140265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1869813561719788, guid: b64438edd1e9c44c8aab7e425ccbdda4,
+    type: 2}
+  m_PrefabInternal: {fileID: 873425236}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098140267}
+  - component: {fileID: 1098140266}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1098140266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098140265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoMostrar: {fileID: 0}
+  numero_codigos: {fileID: 0}
+  numeroTerrenos: 0
+  listaTerrenosId: 
+  dropdown0: {fileID: 0}
+  dropdown1: {fileID: 0}
+  dropdown2: {fileID: 0}
+  dropdown3: {fileID: 0}
+  dropdown4: {fileID: 0}
+  dropdown5: {fileID: 0}
+  dropdown6: {fileID: 0}
+  dropdown7: {fileID: 0}
+  dropdown8: {fileID: 0}
+  dropdown9: {fileID: 0}
+--- !u!4 &1098140267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 873425236}
+  m_GameObject: {fileID: 1098140265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1084216389}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209634607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,20 +3443,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
   numeroTerrenos: 0
   listaTerrenosId: 
   dropdown0: {fileID: 1470571526}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
+  dropdown1: {fileID: 974513780}
+  dropdown2: {fileID: 2073747796}
+  dropdown3: {fileID: 328548551}
+  dropdown4: {fileID: 16284616}
+  dropdown5: {fileID: 910093848}
+  dropdown6: {fileID: 1585896486}
+  dropdown7: {fileID: 932486494}
+  dropdown8: {fileID: 1760281463}
+  dropdown9: {fileID: 744001810}
 --- !u!1 &1297314046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,13 +3549,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1317007455}
   - component: {fileID: 1317007456}
+  - component: {fileID: 1317007457}
   m_Layer: 0
   m_Name: textController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1317007455
 Transform:
   m_ObjectHideFlags: 0
@@ -3385,10 +3564,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317007454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 238, y: -66, z: -943}
+  m_LocalPosition: {x: -419, y: -349, z: -943}
   m_LocalScale: {x: 1, y: 1, z: 2.3335}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 760196973}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1317007456
@@ -3397,7 +3576,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317007454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6abb443fd547b45ef9234efab27021e3, type: 3}
   m_Name: 
@@ -3435,6 +3614,31 @@ MonoBehaviour:
     maximo: 9
   noPisos: {fileID: 0}
   noFilas: {fileID: 0}
+--- !u!114 &1317007457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317007454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
+  numeroTerrenos: 0
+  listaTerrenosId: 
+  dropdown0: {fileID: 1470571526}
+  dropdown1: {fileID: 974513780}
+  dropdown2: {fileID: 2073747796}
+  dropdown3: {fileID: 328548551}
+  dropdown4: {fileID: 16284616}
+  dropdown5: {fileID: 910093848}
+  dropdown6: {fileID: 1585896486}
+  dropdown7: {fileID: 932486494}
+  dropdown8: {fileID: 1760281463}
+  dropdown9: {fileID: 744001810}
 --- !u!1 &1333929642
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,6 +4198,7 @@ GameObject:
   - component: {fileID: 1586692029}
   - component: {fileID: 1586692028}
   - component: {fileID: 1586692027}
+  - component: {fileID: 1586692031}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4095,6 +4300,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1586692031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1586692026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
+  numeroTerrenos: 0
+  listaTerrenosId: 
+  dropdown0: {fileID: 1470571526}
+  dropdown1: {fileID: 974513780}
+  dropdown2: {fileID: 2073747796}
+  dropdown3: {fileID: 328548551}
+  dropdown4: {fileID: 16284616}
+  dropdown5: {fileID: 910093848}
+  dropdown6: {fileID: 1585896486}
+  dropdown7: {fileID: 932486494}
+  dropdown8: {fileID: 1760281463}
+  dropdown9: {fileID: 744001810}
 --- !u!1 &1597127271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,7 +4504,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5854874}
+      - m_Target: {fileID: 534669906}
         m_MethodName: cambiarEscena
         m_Mode: 1
         m_Arguments:
@@ -5618,13 +5848,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
+  textoMostrar: {fileID: 1810546154}
+  numero_codigos: {fileID: 1515233319}
   numeroTerrenos: 0
   listaTerrenosId: 
-  dropdown0: {fileID: 2073747796}
+  dropdown0: {fileID: 0}
   dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
+  dropdown2: {fileID: 2073747796}
   dropdown3: {fileID: 0}
   dropdown4: {fileID: 0}
   dropdown5: {fileID: 0}

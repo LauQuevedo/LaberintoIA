@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -831,6 +832,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.001, y: -0.27600002, z: -0.115}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f4344ef64938046ad52aa38f6a1392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelection: 0
+  totalCharacters: 6
+  button: {fileID: 0}
 --- !u!1 &604057763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,8 +2090,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1416711550}
-        m_MethodName: Select
+      - m_Target: {fileID: 534669906}
+        m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

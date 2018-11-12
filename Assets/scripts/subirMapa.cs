@@ -155,7 +155,8 @@ public class subirMapa : MonoBehaviour {
     }
 
     public void cambiarEscena(){
-        SceneManager.LoadScene(+1, LoadSceneMode.Single);
+        //cambiar escena a elegir personaje
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
 }

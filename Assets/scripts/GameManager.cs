@@ -48,7 +48,6 @@ public class GameManager : MonoBehaviour {
         filasG = 0;
         numeroTerrenosG = 0;
 	}
-   
 
 	private void OnLevelWasLoaded(int index){
 		//level++;
@@ -76,8 +75,7 @@ public class GameManager : MonoBehaviour {
 
     public void isTxtGood(bool resultado, string[] filas, string[] columnas, int terrenos, List<int> terrenosId)
     {
-        if (resultado)
-        {
+        if (resultado){
             //asignación de variables obtenidas a variable global de gameManager
             filasG = filas.Length;
             columnasG = columnas.Length;
@@ -86,9 +84,7 @@ public class GameManager : MonoBehaviour {
 			//asignación de texto informativo en escena subirTxt
             textoTxtAceptado.text = "Tu laberinto es de " + filasG + "x" + columnasG + "\nIncluye " + numeroTerrenosG + " tipos de terrenos";
             ButtonContinuar.SetActive(true);
-        }
-        else
-        {
+        }else{
             //asignación de texto informativo en escena subirTxt
             textoTxtAceptado.text = "El archivo txt no contiene un terreno rectangular";
             ButtonContinuar.SetActive(false);
@@ -109,7 +105,6 @@ public class GameManager : MonoBehaviour {
         }else{
             ButtonContinuarCoordenada.SetActive(false);
         }
-       
     }
 
 

@@ -52,7 +52,9 @@ public class Seleccion : MonoBehaviour
     public void Select()
     {
         print("You selected " + currentSelection);
-		ChangeScene();
+        // ChangeScene();
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
 
     }
 

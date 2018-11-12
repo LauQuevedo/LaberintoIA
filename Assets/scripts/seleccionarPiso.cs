@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class seleccionarPiso : MonoBehaviour {
 
 	//texto informativo
     public Text textoMostrar;
     public Text numero_codigos;
-    public int numeroTerrenos = 0;
+    public int numeroTerrenos;
     public List<int> listaTerrenosId = new List<int>();
     //dropdowns
     List<string> terrenos = new List<string>() { "Selecciona", "Lava", "Agua", "Campo", "Muro", "Tierra", "Hielo", "Madera", "Montaña", "Ladrillo" };
@@ -24,20 +26,26 @@ public class seleccionarPiso : MonoBehaviour {
     public Dropdown dropdown8;
 	public Dropdown dropdown9;
 
+    Scene m_Scene;
+
 
     void Awake(){
-        //  textoMostrar.text = numeroTerrenos + " tipos de terrenos encontrados ";
+        
         //mostrar número de terrenos
         numeroTerrenos = GameManager.numeroTerrenosG;
+
+
         //mostrar código
         listaTerrenosId = GameManager.listaTerrenosId;
         // Debug.Log(listaTerrenosId);
         // foreach (int el in listaTerrenosId){
         //     Debug.Log(el);
         // }
+        textoMostrar.text = numeroTerrenos + " tipos de terrenos encontrados "; 
         numero_codigos.text = "1\n2\n3\n4\n";
-        
 
+
+        
 
         
     }
@@ -55,7 +63,9 @@ public class seleccionarPiso : MonoBehaviour {
         {
             obtenerValorDropdown(dropdown0);
         });
- 
+
+        m_Scene = SceneManager.GetActiveScene();
+        Debug.Log(m_Scene.name);
 
     }
 
@@ -103,7 +113,7 @@ public class seleccionarPiso : MonoBehaviour {
         // ButtonContinuar.SetActive(true);
 	}
 
-    void obtenerValorDropdown(Dropdown change){
+    public void obtenerValorDropdown(Dropdown change){
 		Debug.Log("New Value : " + change.value);
     }
 
@@ -123,7 +133,10 @@ public class seleccionarPiso : MonoBehaviour {
         dropdown9.AddOptions(terrenos);
 	}
 
-	
+    public void cambiarEscena(){
+        //cambiar a coordenadas
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
+    }
 	
 	
 	
