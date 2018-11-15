@@ -136,7 +136,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5854871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
@@ -155,6 +155,7 @@ MonoBehaviour:
   dropdown7: {fileID: 932486494}
   dropdown8: {fileID: 1760281463}
   dropdown9: {fileID: 744001810}
+  peso0: {fileID: 15020983}
 --- !u!224 &5854873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ GameObject:
   - component: {fileID: 15020984}
   - component: {fileID: 15020983}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: peso_0_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,19 +217,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 15020981}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783359062}
   - {fileID: 372917291}
-  m_Father: {fileID: 1586692030}
-  m_RootOrder: 7
+  m_Father: {fileID: 1470571529}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 244.2, y: 146.2}
-  m_SizeDelta: {x: 180.1, y: 32.8}
+  m_AnchoredPosition: {x: 246.1, y: 1.2000122}
+  m_SizeDelta: {x: 180.1, y: 36.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15020983
 MonoBehaviour:
@@ -268,14 +269,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 15020984}
   m_TextComponent: {fileID: 372917292}
   m_Placeholder: {fileID: 783359063}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterValidation: 2
+  m_CharacterLimit: 5
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -289,7 +290,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 
+  m_Text: Ingresa el peso
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -372,12 +373,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -460,42 +461,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 16284613}
---- !u!1 &16284615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 16284613}
 --- !u!114 &16284616 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 16284613}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &16284617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16284615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 1515233319}
-  numero_codigos: {fileID: 1810546154}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 16284616}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &66880484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,12 +1007,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -1124,42 +1095,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 328548548}
---- !u!1 &328548550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 328548548}
 --- !u!114 &328548551 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 328548548}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &328548552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 328548550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 1810546154}
-  numero_codigos: {fileID: 1515233319}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 0}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 328548551}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &372917290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,18 +1157,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Ingresa el peso
 --- !u!222 &372917293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1479,7 +1420,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 238, y: -66, z: -943}
+  m_LocalPosition: {x: 238, y: -57.2, z: -943}
   m_LocalScale: {x: 1, y: 1, z: 2.3335}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1510,6 +1451,7 @@ MonoBehaviour:
   dropdown7: {fileID: 932486494}
   dropdown8: {fileID: 1760281463}
   dropdown9: {fileID: 744001810}
+  peso0: {fileID: 15020983}
 --- !u!1 &628473478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,12 +1608,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -1754,42 +1696,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 744001807}
---- !u!1 &744001809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 744001807}
 --- !u!114 &744001810 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 744001807}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &744001811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 744001809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 744001810}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &760196972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &760196973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1967,7 +1879,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 783359061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1982,12 +1894,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2046,12 +1958,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2102,7 +2014,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 534669906}
+      objectReference: {fileID: 5854871}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2115,7 +2027,7 @@ Prefab:
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: obtenerValorDropdown
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2136,6 +2048,21 @@ Prefab:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1470571526}
+    - target: {fileID: 224914647380016530, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224993573719782842, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224740441153207192, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
   m_IsPrefabAsset: 0
@@ -2381,12 +2308,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2469,42 +2396,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 910093845}
---- !u!1 &910093847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 910093845}
 --- !u!114 &910093848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 910093845}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &910093849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 910093847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 910093848}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &927989342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,12 +2522,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2713,42 +2610,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 932486491}
---- !u!1 &932486493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 932486491}
 --- !u!114 &932486494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 932486491}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &932486495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 932486493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 932486494}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1001 &974513777
 Prefab:
   m_ObjectHideFlags: 0
@@ -2794,12 +2661,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2850,7 +2717,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 534669906}
+      objectReference: {fileID: 5854871}
     - target: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2863,7 +2730,7 @@ Prefab:
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: obtenerValorDropdown
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -2884,6 +2751,21 @@ Prefab:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 974513780}
+    - target: {fileID: 224740441153207192, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224993573719782842, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224914647380016530, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 036cb6f8f81dd4ef3905b9c998a4502a, type: 2}
   m_IsPrefabAsset: 0
@@ -2892,42 +2774,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 974513777}
---- !u!1 &974513779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 974513777}
 --- !u!114 &974513780 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 974513777}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &974513781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 974513779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 1810546154}
-  numero_codigos: {fileID: 1515233319}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 0}
-  dropdown1: {fileID: 974513780}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &1047891350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,6 +2994,7 @@ MonoBehaviour:
   dropdown7: {fileID: 0}
   dropdown8: {fileID: 0}
   dropdown9: {fileID: 0}
+  peso0: {fileID: 0}
 --- !u!1 &1061615294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,7 +3104,7 @@ GameObject:
   - component: {fileID: 1088059458}
   - component: {fileID: 1088059457}
   m_Layer: 5
-  m_Name: peso_input
+  m_Name: peso_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3273,8 +3126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 244.1, y: 215.59998}
-  m_SizeDelta: {x: 184.6, y: 41.6}
+  m_AnchoredPosition: {x: 244.1, y: 205}
+  m_SizeDelta: {x: 184.6, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088059457
 MonoBehaviour:
@@ -3352,6 +3205,7 @@ MonoBehaviour:
   dropdown7: {fileID: 0}
   dropdown8: {fileID: 0}
   dropdown9: {fileID: 0}
+  peso0: {fileID: 0}
 --- !u!4 &1098140267
 Transform:
   m_ObjectHideFlags: 0
@@ -3427,36 +3281,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1283492402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 861733764}
---- !u!114 &1283492405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1283492402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 1810546154}
-  numero_codigos: {fileID: 1515233319}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 1470571526}
-  dropdown1: {fileID: 974513780}
-  dropdown2: {fileID: 2073747796}
-  dropdown3: {fileID: 328548551}
-  dropdown4: {fileID: 16284616}
-  dropdown5: {fileID: 910093848}
-  dropdown6: {fileID: 1585896486}
-  dropdown7: {fileID: 932486494}
-  dropdown8: {fileID: 1760281463}
-  dropdown9: {fileID: 744001810}
 --- !u!1 &1297314046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,7 +3380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1317007455
 Transform:
   m_ObjectHideFlags: 0
@@ -3620,7 +3444,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317007454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
@@ -3639,6 +3463,7 @@ MonoBehaviour:
   dropdown7: {fileID: 932486494}
   dropdown8: {fileID: 1760281463}
   dropdown9: {fileID: 744001810}
+  peso0: {fileID: 0}
 --- !u!1 &1333929642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,12 +3888,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -4151,42 +3976,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 1585896483}
---- !u!1 &1585896485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1585896483}
 --- !u!114 &1585896486 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 1585896483}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1585896487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585896485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 1585896486}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &1586692026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4280,7 +4075,6 @@ RectTransform:
   - {fileID: 2044058784}
   - {fileID: 1088059456}
   - {fileID: 2058930709}
-  - {fileID: 15020982}
   - {fileID: 1470571529}
   - {fileID: 974513778}
   - {fileID: 2073747794}
@@ -4306,7 +4100,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1586692026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
   m_Name: 
@@ -4325,6 +4119,7 @@ MonoBehaviour:
   dropdown7: {fileID: 932486494}
   dropdown8: {fileID: 1760281463}
   dropdown9: {fileID: 744001810}
+  peso0: {fileID: 0}
 --- !u!1 &1597127271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,17 +4247,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1682402996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 877161430}
   m_Father: {fileID: 1586692030}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 467.5, y: -277.6}
+  m_AnchoredPosition: {x: 441.1, y: -69.8}
   m_SizeDelta: {x: 89, y: 75.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682402998
@@ -4505,7 +4300,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 534669906}
-        m_MethodName: cambiarEscena
+        m_MethodName: setGetPesos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4671,12 +4466,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -4759,42 +4554,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 1760281460}
---- !u!1 &1760281462 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1760281460}
 --- !u!114 &1760281463 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 1760281460}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1760281464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760281462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 0}
-  numero_codigos: {fileID: 0}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 1760281463}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 0}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}
 --- !u!1 &1774497784
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,7 +4770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.32, y: 263.3}
+  m_AnchoredPosition: {x: -5.32, y: 265.6}
   m_SizeDelta: {x: 342.2, y: 37.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810546154
@@ -5020,7 +4785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25286114, g: 0.0032929946, b: 0.6981132, a: 1}
+  m_Color: {r: 0.06824318, g: 0, b: 0.3301887, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5029,7 +4794,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 29
+    m_FontSize: 32
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -5226,7 +4991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 660, y: 451.8}
+  m_AnchoredPosition: {x: 660, y: 458}
   m_SizeDelta: {x: 1320, y: 766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003898661
@@ -5342,7 +5107,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
-    m_FontSize: 83
+    m_FontSize: 74
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -5350,9 +5115,9 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 7.84
+    m_LineSpacing: 0.85
   m_Text: Selecciona el tipo de suelo
 --- !u!222 &2023815257
 CanvasRenderer:
@@ -5489,7 +5254,7 @@ GameObject:
   - component: {fileID: 2044058786}
   - component: {fileID: 2044058785}
   m_Layer: 5
-  m_Name: codigo_input
+  m_Name: codigo_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5511,8 +5276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261.6, y: 215.59998}
-  m_SizeDelta: {x: 184.6, y: 41.6}
+  m_AnchoredPosition: {x: -261.6, y: 205}
+  m_SizeDelta: {x: 184.6, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044058785
 MonoBehaviour:
@@ -5634,7 +5399,7 @@ GameObject:
   - component: {fileID: 2058930711}
   - component: {fileID: 2058930710}
   m_Layer: 5
-  m_Name: terreno_input
+  m_Name: terreno_title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5656,8 +5421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.6, y: 215.6}
-  m_SizeDelta: {x: 235.6, y: 41.6}
+  m_AnchoredPosition: {x: -4.6, y: 205}
+  m_SizeDelta: {x: 235.6, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058930710
 MonoBehaviour:
@@ -5738,12 +5503,12 @@ Prefab:
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -115
+      value: -116.2
       objectReference: {fileID: 0}
     - target: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
         type: 2}
@@ -5826,39 +5591,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224561744621621672, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 2073747793}
---- !u!1 &2073747795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1342653344292946, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2073747793}
 --- !u!114 &2073747796 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114865579824810684, guid: 036cb6f8f81dd4ef3905b9c998a4502a,
     type: 2}
   m_PrefabInternal: {fileID: 2073747793}
   m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &2073747797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2073747795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265f3c325854bf5a2ddf283dfa21aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMostrar: {fileID: 1810546154}
-  numero_codigos: {fileID: 1515233319}
-  numeroTerrenos: 0
-  listaTerrenosId: 
-  dropdown0: {fileID: 0}
-  dropdown1: {fileID: 0}
-  dropdown2: {fileID: 2073747796}
-  dropdown3: {fileID: 0}
-  dropdown4: {fileID: 0}
-  dropdown5: {fileID: 0}
-  dropdown6: {fileID: 0}
-  dropdown7: {fileID: 0}
-  dropdown8: {fileID: 0}
-  dropdown9: {fileID: 0}

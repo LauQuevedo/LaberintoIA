@@ -68,22 +68,16 @@ public class GetCoordenadas : MonoBehaviour {
 
 
             // SceneManager.LoadScene(4);
-
-
-
-        }
-        else
-        {
+        }else{
             textoPermiso.text = "Tienes que ingresar todos los datos";
             coincide = false;
             gameManager.isInicioFinGood(coincide, v_filaInicio, v_filaFinal, columnaInicio.text, columnaFinal.text);
 
         }
-
     }
 
     public void cambiarEscenaC(){
-        SceneManager.LoadScene(+1);
+        SceneManager.LoadScene(4); //cambiar a la implementación del Board
     }
 
     /* MISSING:
