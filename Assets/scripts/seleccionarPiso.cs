@@ -27,6 +27,16 @@ public class seleccionarPiso : MonoBehaviour {
 	public Dropdown dropdown9;
 
     public InputField peso0;
+    public InputField peso1;
+    public InputField peso2;
+    public InputField peso3;
+    public InputField peso4;
+    public InputField peso5;
+    public InputField peso6;
+    public InputField peso7;
+    public InputField peso8;
+    public InputField peso9;
+
 
     void Awake(){
         string text_codigos = "";
@@ -48,17 +58,24 @@ public class seleccionarPiso : MonoBehaviour {
 
     }
 
-
+    
     // Use this for initialization
     void Start () {
         Debug.Log("Start");
         
         //mostrar, rellenar y listener dropdowns 
         mostrarDropdown(numeroTerrenos);
+        obtenerPesos(numeroTerrenos);
 
-        peso0.onValueChanged.AddListener(delegate{
-            obtenerValorPesos(peso0, "peso 0");
-        });
+
+
+        List<GameManager.Terreno> personas = new List<GameManager.Terreno>();
+        GameManager.Terreno per1 = new GameManager.Terreno() { codigo_terreno = 1, tipo_terreno = 2, peso_terreno = 2.23 };
+        personas.Add(per1);
+        GameManager.Terreno per = personas[0];
+
+        Debug.Log("prueba: "+per.codigo_terreno+ " + "+per.tipo_terreno);
+        
     }
 
 	void mostrarDropdown(int numeroTerrenos){
@@ -72,6 +89,7 @@ public class seleccionarPiso : MonoBehaviour {
                     dropdown0.onValueChanged.AddListener(delegate{
                         obtenerValorDropdown(dropdown0, "dropdown 0");
                     });
+                    
                     
                     break;
                 case 1:
@@ -151,6 +169,75 @@ public class seleccionarPiso : MonoBehaviour {
 			}
 		}
 	}
+
+    void obtenerPesos(int numeroTerrenos){
+        for (int i = 0; i < numeroTerrenos; i++){
+            switch (i){
+                case 0:
+                    // peso0.gameObject.SetActive(true);
+                    peso0.onValueChanged.AddListener(delegate{
+                        obtenerValorPesos(peso0, "peso 0");
+                    });
+                    break;
+                case 1:
+                    peso1.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso1, "peso 1");
+                    });
+                    break;
+                case 2:
+                    peso2.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso2, "peso 2");
+                    });
+                    break;
+                case 3:
+                    peso3.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso3, "peso 3");
+                    });
+                    break;
+                case 4:
+                    peso4.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso4, "peso 4");
+                    });
+                    break;
+                case 5:
+                    peso5.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso5, "peso 5");
+                    });
+                    break;
+                case 6:
+                    peso6.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso6, "peso 6");
+                    });
+                    break;
+                case 7:
+                    peso7.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso7, "peso 7");
+                    });
+                    break;
+                case 8:
+                    peso8.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso8, "peso 8");
+                    });
+                    break;
+                case 9:
+                    peso9.onValueChanged.AddListener(delegate
+                    {
+                        obtenerValorPesos(peso9, "peso 9");
+                    });
+                    break;
+
+                default: break;
+            }
+        }
+    }
 
     public void obtenerValorDropdown(Dropdown change, string name){
         Debug.Log("Value from " + name + " :" + change.value);

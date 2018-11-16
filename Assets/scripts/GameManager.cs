@@ -27,8 +27,14 @@ public class GameManager : MonoBehaviour {
     public static int columnaFinalG, columnaInicioG, filaFinalG, filaInicioG;
     public static List<int> listaTerrenosId = new List<int>();
     //variables para colocar casilla inicio, fin
-    public static int xFinal, xInicio, yFinal, yInicio; 
+    public static int xFinal, xInicio, yFinal, yInicio;
 
+    public class Terreno{
+        public int codigo_terreno { get; set; }
+        public int tipo_terreno { get; set; }
+        public double peso_terreno { get; set; }
+    }
+    
     // Use this for initialization
     void Awake () {
 		if(instance == null){
